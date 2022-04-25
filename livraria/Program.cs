@@ -1,9 +1,24 @@
+using livraria.Models;
+using livraria.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var conexao = builder.Configuration.GetConnectionString("DefaultConnection");
+var server = builder.Configuration["DbServer"] ?? "localhost";
+var port = builder.Configuration["DbPort"] ?? "1450";
+var user = builder.Configuration["DbUser"] ?? "SA";
+var password = builder.Configuration["Password"] ?? "Numsey#2022";
+var database = builder.Configuration["Database"] ?? "LivrosDb";
+
+var connectionString = $"Server={server}, {port};Initial Catalog={database};User ID={user};Password={password}";
+
+//var conexao = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
@@ -11,7 +26,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 

@@ -1,6 +1,8 @@
 using livraria.Models;
 using Microsoft.EntityFrameworkCore;
 
+namespace livraria.Services;
+
 public static class DatabaseManagementServices
 {
   public static void MigrationInitialisation(this IApplicationBuilder app)

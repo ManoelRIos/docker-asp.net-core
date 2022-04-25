@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace livraria.Controllers
 {
-  public class LivrariaController : Controller
+  public class LivrariaController :Controller
   {
     private readonly AppDbContext _context;
 
@@ -23,7 +23,7 @@ namespace livraria.Controllers
     [HttpGet]
     public IActionResult Create()
     {
-      return View()
+      return View();
     }
     [HttpPost]
     public async Task<IActionResult> Create(Livro livro)
@@ -33,7 +33,7 @@ namespace livraria.Controllers
         try
         {
           _context.Livros.Add(livro);
-          await _context.SaveChangeAsync();
+          await _context.SaveChangesAsync();
           return RedirectToAction("Index");
         }
         catch(Exception ex)

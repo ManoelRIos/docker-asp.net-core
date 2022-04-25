@@ -21,6 +21,30 @@
     <thead>
       <tr>
         <th>
+          @Html.DisplayNameFor(model => model.Titulo)
         </th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+        @foreach(var item in Model)
+        {
+          <tr>
+            <td>
+              @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+              <a asp-action="Edit" asp-route-id="@item.Id" title="Edita" class="btn btn-warning">
+                <span class="fas fa-edit">Editar</span>                
+              </a>
+
+              <a asp-action="Delete" asp-route-id="@item.Id" title="Deleta" class="btn btn-danger">
+                <span class="fas fa-trash-alt">Deletar</span>                
+              </a>
+            </td>
+          </tr>
+
+        }
+      <tbody>
 
 
