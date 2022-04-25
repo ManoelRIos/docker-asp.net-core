@@ -38,7 +38,7 @@ namespace livraria.Controllers
         }
         catch(Exception ex)
         {
-          ModelState.AddModelError(string.Empty, $"Algo dey errado {ex.Message}");
+          ModelState.AddModelError(string.Empty, $"Algo deu errado {ex.Message}");
         }
       }
       ModelState.AddModelError(string.Empty, $"Algo deu errado, modelo inválido");

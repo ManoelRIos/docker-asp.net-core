@@ -15,6 +15,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+DatabaseManagementServices.MigrationInitialisation(app);
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
