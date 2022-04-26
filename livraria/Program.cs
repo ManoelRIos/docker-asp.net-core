@@ -13,9 +13,9 @@ var user = builder.Configuration["DbUser"] ?? "SA";
 var password = builder.Configuration["Password"] ?? "Numsey#2022";
 var database = builder.Configuration["Database"] ?? "LivrosDb";
 
-var connectionString = $"Server={server}, {port};Initial Catalog={database};User ID={user};Password={password}";
+//var connectionString = $"Server={server}, {port};Initial Catalog={database};User ID={user};Password={password}";
 
-//var conexao = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
