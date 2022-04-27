@@ -13,6 +13,7 @@ namespace livraria.Controllers
       _context = context;
     }
 
+    //Listagem dos livros
     [HttpGet]
     public IActionResult Index()
     {
@@ -20,6 +21,7 @@ namespace livraria.Controllers
       return View(books);
     }
 
+    //Cria os livros
     [HttpGet]
     public IActionResult Create()
     {
@@ -27,6 +29,7 @@ namespace livraria.Controllers
     }
     [HttpPost]
     public async Task<IActionResult> Create(Livro livro)
+
     {
       if (ModelState.IsValid)
       {
@@ -44,6 +47,7 @@ namespace livraria.Controllers
       ModelState.AddModelError(string.Empty, $"Algo deu errado, modelo inválido");
       return View(livro);
     }
+
 
   }
 
