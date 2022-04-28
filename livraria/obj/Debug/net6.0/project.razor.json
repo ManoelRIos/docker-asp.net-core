@@ -16313,6 +16313,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\Livraria\\Details.cshtml",
+      "TargetPath": "Views\\Livraria\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\Movies\\Details.cshtml",
       "TargetPath": "Views\\Movies\\Details.cshtml",
       "FileKind": "mvc"

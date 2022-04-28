@@ -1,6 +1,6 @@
 using livraria.Models;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace livraria.Controllers
 {
@@ -47,6 +47,23 @@ namespace livraria.Controllers
       }
       ModelState.AddModelError(string.Empty, $"Algo deu errado, modelo inválido");
       return View(livro);
+    }
+    public async Task<IActionResult> Details(int? id)
+    {
+      if (id == null)
+      {
+        return NotFound();
+      }
+
+      var movie = await _context.Livros.FirstOrDefaultAsync(b => b.Id == id);
+
+      if (movie == null)
+      {
+
+        return NotFound();
+      }
+      return View(movie);
+
     }
 
 
