@@ -16303,6 +16303,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\HelloWord\\index.cshtml",
+      "TargetPath": "Views\\HelloWord\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -16313,8 +16318,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\HelloWorld\\Index.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Index.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\HelloWord\\Welcome.cshtml",
+      "TargetPath": "Views\\HelloWord\\Welcome.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16338,13 +16343,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\HelloWorld\\Welcome.cshtml",
-      "TargetPath": "Views\\HelloWorld\\Welcome.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\Views\\HelloWord\\Details.cshtml",
+      "TargetPath": "Views\\HelloWord\\Details.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -19,6 +19,7 @@ namespace livraria.Controllers
     {
       var books = _context.Livros.ToList();
       return View(books);
+      
     }
 
     //Cria os livros
