@@ -48,6 +48,9 @@ namespace livraria.Controllers
       ModelState.AddModelError(string.Empty, $"Algo deu errado, modelo inválido");
       return View(livro);
     }
+
+    //Mostrar detalhe de livro específico
+    [HttpGet]
     public async Task<IActionResult> Details(int? id)
     {
       if (id == null)
@@ -59,11 +62,25 @@ namespace livraria.Controllers
 
       if (movie == null)
       {
-
         return NotFound();
       }
       return View(movie);
+    }
 
+    //Editar Livro
+    public async Task<IActionResult> Edit(int? id)
+    {
+      if(id == null)
+      {
+        return NotFound();
+      }
+
+      var movie = await _context.Livros.FirstOrDefaultAsync(b => b.Id == id);
+      if(movie == null)
+      {
+        return NotFound();
+      }
+      return View();
     }
 
 
