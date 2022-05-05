@@ -1,0 +1,47 @@
+@model IEnumerable<livraria.Models.Livro>
+
+<h2>Filmes</h2>
+<hr />
+
+<p>Filmes</p>
+
+@* <div class="row">
+  <div class="col-md-12">
+    <div>
+      <div clas="pull-left">
+        <a asp-action="Create" class= "btn btn-primary">
+          <span title="Incluir Livro" clas="fas fa-plus"></span>
+            Incluir Livro
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<div class="panel panel-default">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+        @foreach(var item in Model)
+        {
+          <tr>
+            <td>
+              @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+              <a asp-action="Details" asp-route-id="@item.Id" title="Details" class="btn btn-warning">
+                <span class="fas fa-edit">Detalhes</span>                
+              </a>          
+            </td>
+          </tr>
+        }
+      <tbody>
+ *@
+

@@ -1,0 +1,27 @@
+@model livraria.Models.Livro
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+<p>Aqui você pode excluir ou editar informações do livro.</p>
+
+<div>
+    <h4>Livro</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>        
+    </dl>
+</div>
+<div>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a class="btn btn-dark" asp-action="Index">Voltar</a> |
+    <a class="btn btn-delete" asp-action="Delete" asp-route-id="@Model.Id">Deletar</a> 
+    
+</div>
