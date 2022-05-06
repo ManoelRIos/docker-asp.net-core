@@ -1,0 +1,17 @@
+
+<h2>{{title}}</h2>
+
+<mat-grid-list cols="3" rowHeight="2:2.5">
+  <mat-grid-tile *ngFor="let prato of pratos">
+    <div class="card">
+      <img src="https://blog-static.deliway.com.br/assets/base/a25/57a/7b2/fast-food-pizza.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{prato.nome}}</h5>
+        <p class="card-text">descrição do prato</p>
+        <span>R$ 39,99</span>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
