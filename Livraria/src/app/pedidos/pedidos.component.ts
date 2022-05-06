@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosComponent implements OnInit {
 
+  title = 'Pedidos';
+
+  public pedidos = [
+    {nome: 'Batata'},
+    {nome: 'Hambúrguer'},
+    {nome: 'Coca-cola'},
+    {nome: 'Guaraná'},
+    {nome: 'Coxinha'}
+
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
