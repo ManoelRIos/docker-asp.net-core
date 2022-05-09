@@ -10,19 +10,20 @@ import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialModule } from '../material.module';
+import { TitleComponent } from './title/title.component';
 
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     PedidosComponent,
     CardapioComponent,
     MenuComponent,
     DashboardComponent,
-  
-  ],
+      TitleComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
