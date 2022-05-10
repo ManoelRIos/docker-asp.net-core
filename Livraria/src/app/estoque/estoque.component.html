@@ -1,0 +1,23 @@
+
+
+<div class="container">
+  <app-title [title]="titulo"></app-title>
+  <table class="table table-bordered table-hover ">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Und. Medida</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of produtos">
+        <th scope="rol">{{ produto.id }}</th>
+        <td class="table-light">{{ produto.nome }}</td>
+        <td>{{ produto.qtd }}</td>
+        <td>{{ produto.undMed }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
