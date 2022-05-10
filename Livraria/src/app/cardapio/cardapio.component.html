@@ -22,8 +22,8 @@
   <!-- INDEX ALL -->
   <div *ngIf="!pratoSelected">
     <mat-grid-list cols="3" rowHeight="2:1.5">
-      <mat-grid-tile *ngFor="let prato of pratos" (click)="pratoSelect(prato)">
-        <div class="card">
+      <mat-grid-tile *ngFor="let prato of pratos">
+        <div class="card" (click)="pratoSelect(prato)">
           <div class="card-body">
             <h5 class="card-title">{{ prato.nome }}</h5>
             <p class="card-text">{{ prato.desc }}</p>

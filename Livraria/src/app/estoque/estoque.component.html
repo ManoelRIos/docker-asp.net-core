@@ -1,23 +1,75 @@
-
-
 <div class="container">
   <app-title [title]="titulo"></app-title>
-  <table class="table table-bordered table-hover ">
-    <thead class="table-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Quantidade</th>
-        <th scope="col">Und. Medida</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let produto of produtos">
-        <th scope="rol">{{ produto.id }}</th>
-        <td class="table-light">{{ produto.nome }}</td>
-        <td>{{ produto.qtd }}</td>
-        <td>{{ produto.undMed }}</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <div *ngIf="produtoSelected">
+    <div class="row">
+      <div class="mr-auto">
+        <app-titulo [titulo]="'Editando: ' + produtoSelected"></app-titulo>
+      </div>
+      <div class="col-sm-6">
+        <button (click)="voltar()">Voltar</button>
+      </div>
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Example label</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput"
+          placeholder="Example input placeholder"
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Another label</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput2"
+          placeholder="Another input placeholder"
+        />
+      </div>
+    </form>
+  </div>
+
+  <div *ngIf="!produtoSelected">
+    <table class="table table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Quantidade</th>
+          <th scope="col">Und. Medida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let produto of produtos"
+          style="cursor: pointer"
+          (click)="produtoSelect(produto)"
+        >
+          <th scope="row">{{ produto.id }}</th>
+          <td class="table-light">{{ produto.nome }}</td>
+          <td>
+            {{ produto.qtd }}
+            <button
+              class="btn btn-outline-success"
+              (click)="addQtd(produto)"
+              style="padding: 0.1rem 0.5rem"
+            >
+              +
+            </button>
+            <button
+              class="btn btn-warning"
+              (click)="addQtd(produto)"
+              style="padding: 0.1rem 0.5rem"
+            >
+              -
+            </button>
+          </td>
+          <td>{{ produto.undMed }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

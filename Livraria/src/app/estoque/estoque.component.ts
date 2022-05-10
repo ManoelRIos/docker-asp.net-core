@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class EstoqueComponent implements OnInit {
   public titulo = 'Estoque';
 
+  public produtoSelected: string | undefined;
+
   public produtos = [
     { id:1, nome:'Batata', qtd: 3, undMed:'Kg'},
     { id:2, nome:'Alface', qtd: 6, undMed:'Und'},
@@ -17,7 +19,17 @@ export class EstoqueComponent implements OnInit {
     { id:6, nome:'Guaraná', qtd: 18, undMed: 'L'}
   ];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  addQtd(produto: any){
+    produto.qtd++;    
+  }
+
+  produtoSelect(produto:any){
+    this.produtoSelected = produto.nome;
+  }
+  voltar(){
+    this.produtoSelected = '';
+  }
+
 
 
   constructor() { }
