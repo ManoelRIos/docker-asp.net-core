@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\livraria.csproj",
+  "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\livraria.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16298,68 +16298,68 @@
   "RootNamespace": "livraria",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Livraria\\Create.cshtml",
-      "TargetPath": "Views\\Livraria\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Livraria\\Details.cshtml",
-      "TargetPath": "Views\\Livraria\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Movies\\Create.cshtml",
-      "TargetPath": "Views\\Movies\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Movies\\Index.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Movies\\Index.cshtml",
       "TargetPath": "Views\\Movies\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Movies\\Details.cshtml",
-      "TargetPath": "Views\\Movies\\Details.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Livraria\\Details.cshtml",
+      "TargetPath": "Views\\Livraria\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Livraria\\Index.cshtml",
+      "TargetPath": "Views\\Livraria\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Movies\\Details.cshtml",
+      "TargetPath": "Views\\Movies\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\Views\\Livraria\\Index.cshtml",
-      "TargetPath": "Views\\Livraria\\Index.cshtml",
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Livraria\\Create.cshtml",
+      "TargetPath": "Views\\Livraria\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\Views\\Movies\\Create.cshtml",
+      "TargetPath": "Views\\Movies\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],

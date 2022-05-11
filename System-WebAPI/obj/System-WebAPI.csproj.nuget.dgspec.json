@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj": {}
+    "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\System-WebAPI\\System-WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj": {
+    "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\System-WebAPI\\System-WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\System-WebAPI\\System-WebAPI.csproj",
         "projectName": "System-WebAPI",
-        "projectPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj",
+        "projectPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\System-WebAPI\\System-WebAPI.csproj",
         "packagesPath": "C:\\Users\\manoel.rios\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\System-WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manoel.rios\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,22 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9qVO9MtGj0maHzZVge9G+kSL/tPi5Y4Y6jnTbpEYYP7XzDoYcuK7cCAIwH2Eu971JcOec+EgMrd8IJubY99Bhg==",
+  "dgSpecHash": "g9o7CGXNL1Nk8DC/iyUNfiKguPp5nhxfJwDd2lrcop7ULKw/+TM5ZPTOJf5OVt4f9FjcV0N+2bWuhQ7pEijA2A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\livraria.csproj",
+  "projectFilePath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\test\\livraria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manoel.rios\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\manoel.rios\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
