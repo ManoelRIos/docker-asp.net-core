@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../models/Produto';
 
 @Component({
   selector: 'app-estoque',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class EstoqueComponent implements OnInit {
   public titulo = 'Estoque';
 
-  public produtoSelected: string | undefined;
+  public produtoSelected?: null | Produto;
 
   public produtos = [
     { id:1, nome:'Batata', qtd: 3, undMed:'Kg'},
@@ -19,15 +20,19 @@ export class EstoqueComponent implements OnInit {
     { id:6, nome:'Guaraná', qtd: 18, undMed: 'L'}
   ];
 
-  addQtd(produto: any){
+  addQtd(produto: Produto){
     produto.qtd++;    
   }
 
-  produtoSelect(produto:any){
-    this.produtoSelected = produto.nome;
+  removeQtd(produto: Produto){
+    produto.qtd--;    
+  }
+
+  produtoSelect(produto: Produto){
+    this.produtoSelected = produto;
   }
   voltar(){
-    this.produtoSelected = '';
+    this.produtoSelected = null;
   }
 
 

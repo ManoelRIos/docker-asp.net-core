@@ -4,36 +4,45 @@
   <div *ngIf="produtoSelected">
     <div class="row">
       <div class="mr-auto">
-        <app-titulo [titulo]="'Editando: ' + produtoSelected"></app-titulo>
-      </div>
-      <div class="col-sm-6">
-        <button (click)="voltar()">Voltar</button>
+        <h2>Editando: {{ produtoSelected.nome }}</h2>
       </div>
     </div>
     <form>
       <div class="form-group">
-        <label for="formGroupExampleInput">Example label</label>
+        <label for="formGroupExampleInput">Nome</label>
         <input
           type="text"
           class="form-control"
           id="formGroupExampleInput"
-          placeholder="Example input placeholder"
+          value="{{ produtoSelected.nome }}"
         />
       </div>
-      <div class="form-group">
-        <label for="formGroupExampleInput2">Another label</label>
+
+      <div class="form-group input-group mb-3">
+        <label class="input-group-text" for="formGroupExampleInput2">Quantidade</label>
         <input
-          type="text"
+          type="number"
           class="form-control"
           id="formGroupExampleInput2"
-          placeholder="Another input placeholder"
+          value="{{ produtoSelected.qtd }}"
         />
-      </div>
+        <label class="input-group-text" for="inputGroupSelect01"
+          >Unidade de medida</label
+        >
+        <select class="form-select" id="inputGroupSelect01">
+          <option selected>{{ produtoSelected.undMed }}</option>
+          <option value="1">Kg</option>
+          <option value="2">Unidade</option>
+          <option value="3">L</option>
+        </select>
+      </div>      
+        <button class="btn btn-outline-success" (click)="voltar()">Salvar</button>
+        <button class="btn btn-outline-primary ms-2" (click)="voltar()">Voltar</button>
     </form>
   </div>
 
   <div *ngIf="!produtoSelected">
-    <table class="table table-hover">
+    <table class="table table-striped table-hover">
       <thead class="table-dark">
         <tr>
           <th scope="col">#</th>
@@ -43,31 +52,41 @@
         </tr>
       </thead>
       <tbody>
-        <tr
-          *ngFor="let produto of produtos"
-          style="cursor: pointer"
-          (click)="produtoSelect(produto)"
-        >
+        <tr *ngFor="let produto of produtos">
           <th scope="row">{{ produto.id }}</th>
           <td class="table-light">{{ produto.nome }}</td>
           <td>
             {{ produto.qtd }}
-            <button
-              class="btn btn-outline-success"
-              (click)="addQtd(produto)"
-              style="padding: 0.1rem 0.5rem"
+            <div
+              class="btn-group ms-3"
+              role="group"
+              aria-label="Basic outlined example"
             >
-              +
-            </button>
+              <button
+                (click)="addQtd(produto)"
+                class="btn btn-outline-primary"
+                style="font-weight: bold"
+              >
+                +
+              </button>
+              <button
+                (click)="removeQtd(produto)"
+                class="btn btn-outline-primary"
+                style="font-weight: bold"
+              >
+                -
+              </button>
+            </div>
+          </td>
+          <td>
+            {{ produto.undMed }}
             <button
-              class="btn btn-warning"
-              (click)="addQtd(produto)"
-              style="padding: 0.1rem 0.5rem"
+              (click)="produtoSelect(produto)"
+              class="ms-2 btn btn-warning"
             >
-              -
+              Editar
             </button>
           </td>
-          <td>{{ produto.undMed }}</td>
         </tr>
       </tbody>
     </table>
