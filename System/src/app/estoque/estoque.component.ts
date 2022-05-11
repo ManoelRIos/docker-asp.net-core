@@ -7,7 +7,9 @@ import { Produto } from '../models/Produto';
   styleUrls: ['./estoque.component.scss']
 })
 export class EstoqueComponent implements OnInit {
+
   public titulo = 'Estoque';
+  textSimple?: string;
 
   public produtoSelected?: null | Produto;
 

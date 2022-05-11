@@ -1828,11 +1828,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\livraria.csproj",
+      "projectUniqueName": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\livraria.csproj",
       "projectName": "livraria",
-      "projectPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\livraria.csproj",
+      "projectPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\livraria.csproj",
       "packagesPath": "C:\\Users\\manoel.rios\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\obj\\",
+      "outputPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\Livraria-WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\manoel.rios\\AppData\\Roaming\\NuGet\\NuGet.Config",

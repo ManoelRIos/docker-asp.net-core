@@ -59,3 +59,14 @@ C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\livraria\obj\Debug\n
 C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\livraria\obj\Debug\net6.0\livraria.pdb
 C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\livraria\obj\Debug\net6.0\livraria.genruntimeconfig.cache
 C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\livraria\obj\Debug\net6.0\ref\livraria.dll
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.csproj.AssemblyReference.cache
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.AssemblyInfoInputs.cache
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.AssemblyInfo.cs
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.csproj.CoreCompileInputs.cache
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.RazorAssemblyInfo.cache
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.RazorAssemblyInfo.cs
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.dll
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\refint\livraria.dll
+C:\Users\manoel.rios\Documents\projetos\docker-asp.net-core\Livraria-WebApi\obj\Debug\net6.0\livraria.pdb

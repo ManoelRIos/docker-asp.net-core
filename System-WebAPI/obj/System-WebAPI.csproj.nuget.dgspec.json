@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\livraria.csproj": {}
+    "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\livraria.csproj": {
+    "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\livraria.csproj",
-        "projectName": "livraria",
-        "projectPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\livraria.csproj",
+        "projectUniqueName": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj",
+        "projectName": "System-WebAPI",
+        "projectPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj",
         "packagesPath": "C:\\Users\\manoel.rios\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\livraria\\obj\\",
+        "outputPath": "C:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core\\System-WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manoel.rios\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,15 +40,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
