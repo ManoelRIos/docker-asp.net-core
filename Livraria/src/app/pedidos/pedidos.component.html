@@ -1,12 +1,13 @@
 
-<h2>{{title}}</h2>
+<app-title [title]="title"></app-title>
 
 <mat-grid-list cols="3" rowHeight="2:1">
   <mat-grid-tile *ngFor="let pedido of pedidos">
     <mat-card>
-      <h2>Mesa 1</h2>
+      <p style="font-weight: bold;">Mesa {{pedido.id}}</p>
       <p>{{pedido.nome}}</p>
-      <span>R$ 32,99</span>
+      <span>{{pedido.valor}}</span>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
+
