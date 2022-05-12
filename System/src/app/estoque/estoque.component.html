@@ -4,51 +4,43 @@
   <!-- Ao selecionar produto -->
   <div *ngIf="produtoSelected">
     <div class="row">
-      <div class="mr-auto">
+      <div class="col-10">
         <h2>Editando: {{ produtoSelected.nome }}</h2>
       </div>
+      <button class="btn btn-outline-primary col-1" (click)="voltar()">
+        Voltar
+      </button>
     </div>
     <!-- Formulário para editar produto -->
-    <form>
+    <form [formGroup]="produtoForm" (submit)="produtoSubmit()">
       <div class="form-group">
         <label for="formGroupExampleInput">Nome</label>
-        <input
-          type="text"
-          class="form-control"
-          id="formGroupExampleInput"
-          value="{{ produtoSelected.nome }}"
-        />
+        <input type="text" class="form-control" formControlName="nome" />
       </div>
       <div class="form-group input-group mb-3">
         <label class="input-group-text" for="formGroupExampleInput2"
           >Quantidade</label
         >
-        <input
-          type="number"
-          class="form-control"
-          id="formGroupExampleInput2"
-          value="{{ produtoSelected.qtd }}"
-        />
+        <input type="number" class="form-control" formControlName="qtd" />
         <label class="input-group-text" for="inputGroupSelect01"
           >Unidade de medida</label
         >
-        <select class="form-select" id="inputGroupSelect01">
-          <option selected>{{ produtoSelected.undMed }}</option>
+        <select class="form-select">
+          <option formControlName="undMed" selected>
+            {{ produtoSelected.undMed }}
+          </option>
           <option value="1">Kg</option>
           <option value="2">Unidade</option>
           <option value="3">L</option>
         </select>
       </div>
-      <button class="btn btn-outline-success" (click)="voltar()">Envia
-        r</button>
-      <button class="btn btn-outline-primary ms-2" (click)="voltar()">
-        Voltar
+      <button class="btn btn-outline-success" [disabled]="!produtoForm.valid">
+        Enviar
       </button>
     </form>
 
     <!-- Informações do produto -->
     <app-dashboard></app-dashboard>
-    
   </div>
 
   <div *ngIf="!produtoSelected">
@@ -87,10 +79,16 @@
           </td>
           <td>{{ produto.undMed }}</td>
           <td>
-            <button (click)="produtoSelect(produto)" class="ms-2 btn btn-outline-primary">
+            <button
+              (click)="produtoSelect(produto)"
+              class="ms-2 btn btn-outline-primary"
+            >
               Detalhes
             </button>
-            <button (click)="produtoSelect(produto)" class="ms-2 btn btn-outline-danger">
+            <button
+              (click)="produtoSelect(produto)"
+              class="ms-2 btn btn-outline-danger"
+            >
               Excluir
             </button>
           </td>

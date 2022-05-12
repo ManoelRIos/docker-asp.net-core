@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { TitleComponent } from './title/title.component';
 import { EstoqueComponent } from './estoque/estoque.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { UserAccountComponent } from './userAccount/userAccount.component';
+
 
 
 
@@ -35,7 +37,9 @@ import { UserAccountComponent } from './userAccount/userAccount.component';
     BrowserAnimationsModule,
     LayoutModule,
     MaterialModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Produto } from '../models/Produto';
 
 @Component({
@@ -8,6 +9,7 @@ import { Produto } from '../models/Produto';
 })
 export class EstoqueComponent implements OnInit {
 
+  public produtoForm!: FormGroup;
   public titulo = 'Estoque';
   textSimple?: string;
 
@@ -22,6 +24,29 @@ export class EstoqueComponent implements OnInit {
     { id:6, nome:'Guaraná', qtd: 18, undMed: 'L'}
   ];
 
+  constructor(private fb: FormBuilder) { 
+    this.createForm();
+  }
+
+  ngOnInit() {
+  }
+
+  createForm() {
+    this.produtoForm = this.fb.group({
+      nome: ['', Validators.required],
+      qtd: ['', Validators.required],
+      undMed: ['', Validators.required]
+    });
+  }
+  produtoSubmit(){
+    console.log(this.produtoForm.value);
+  }
+
+  produtoSelect(produto: Produto){
+    this.produtoSelected = produto;
+    this.produtoForm.patchValue(produto);
+  }
+
   addQtd(produto: Produto){
     produto.qtd++;    
   }
@@ -30,18 +55,8 @@ export class EstoqueComponent implements OnInit {
     produto.qtd--;    
   }
 
-  produtoSelect(produto: Produto){
-    this.produtoSelected = produto;
-  }
+
   voltar(){
     this.produtoSelected = null;
   }
-
-
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
