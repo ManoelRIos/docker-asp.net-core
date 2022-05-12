@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System_WebAPI.Data;
 
 namespace System_WebAPI.Controllers
 {
@@ -7,10 +8,14 @@ namespace System_WebAPI.Controllers
 
     public class ProdutoController : ControllerBase
     {
-        
+        public ProdutoController(IRepository repo)
+        {
+                        
+        }
         [HttpGet]
         public IActionResult get()            
         {
+            
             try
             {
                 return Ok("produto");                

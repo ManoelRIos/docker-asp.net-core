@@ -16,5 +16,7 @@ namespace System_WebAPI.Models
     public int qtd { get; set; }
     public string undMed { get; set; }
 
+    
+
   }
 }

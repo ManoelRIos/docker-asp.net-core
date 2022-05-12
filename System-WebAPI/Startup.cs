@@ -1,9 +1,14 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using System_WebAPI.Data;
 
 namespace SmartSchool_WebAPI
 {
-  public class Startup
+    public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -19,7 +24,8 @@ namespace SmartSchool_WebAPI
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConn"))
             );
 
-            services.AddControllers();                  
+            services.AddControllers();                 
+            services.AddScoped<IRepository, Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
