@@ -1,0 +1,36 @@
+
+
+<div class="container">
+  <app-title [title]="title"></app-title>
+  <!-- DETAILS -->
+  <div class="d-flex justify-content-cente">
+    <div *ngIf="pratoSelected">
+      <div class="card text-center">
+        <div class="card-header">
+          {{ pratoSelected }}
+        </div>
+        <div class="card-body">
+          <img class="card-img-top" src="" alt="imagem" />
+          <h5 class="card-title">{{ pratoSelected }}</h5>
+          <p class="card-text">{{ pratos[0].desc }}</p>
+          <button class="btn btn-warning" (click)="voltar()">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDEX ALL -->
+  <div *ngIf="!pratoSelected">
+    <mat-grid-list cols="3" rowHeight="2:1.5">
+      <mat-grid-tile *ngFor="let prato of pratos">
+        <div class="card" (click)="pratoSelect(prato)">
+          <div class="card-body">
+            <h5 class="card-title">{{ prato.nome }}</h5>
+            <p class="card-text">{{ prato.desc }}</p>
+            <span>{{ prato.valor }} R$</span>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
