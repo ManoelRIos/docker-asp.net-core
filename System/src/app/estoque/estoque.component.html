@@ -43,6 +43,7 @@
     <app-dashboard></app-dashboard>
   </div>
 
+  <!-- Lista de produtos em estoque -->
   <div *ngIf="!produtoSelected">
     <table class="table table-striped table-hover">
       <thead class="table-dark">
@@ -50,6 +51,7 @@
           <th scope="col">#</th>
           <th scope="col">Nome</th>
           <th scope="col">Quantidade</th>
+          <th scope="col"></th>
           <th scope="col">Und. Medida</th>
           <th scope="col"></th>
         </tr>
@@ -60,40 +62,52 @@
           <td class="table-light">{{ produto.nome }}</td>
           <td>
             {{ produto.qtd }}
+          </td>
+          <td>
             <div class="btn-group ms-3">
               <button
                 (click)="addQtd(produto)"
                 class="btn btn-outline-primary"
-                style="font-weight: bold"
-              >
+                style="font-weight: bold">
                 +
               </button>
               <button
+                *ngIf="!(produto.qtd == 0)"
                 (click)="removeQtd(produto)"
                 class="btn btn-outline-primary"
-                style="font-weight: bold"
-              >
+                style="font-weight: bold">
                 -
               </button>
             </div>
           </td>
           <td>{{ produto.undMed }}</td>
           <td>
-            <button
-              (click)="produtoSelect(produto)"
-              class="ms-2 btn btn-outline-primary"
-            >
-              Detalhes
-            </button>
-            <button
-              (click)="produtoSelect(produto)"
-              class="ms-2 btn btn-outline-danger"
-            >
-              Excluir
-            </button>
+            <div class="btn-group">
+              <button (click)="produtoSelect(produto)" class=" btn btn-outline-primary">
+                Detalhes
+              </button>
+              <button  (click)="openModal(template)" class=" btn btn-outline-danger">
+                Excluir
+              </button>              
+            </div>            
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+
+<!-- Modal  -->
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Deseja realmente excluir esse produto?</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class=" modal-body">
+    <button class="btn btn-danger">Sim</button>
+    <button  (click)="modalRef?.hide()" class="btn btn-light ">Cancelar</button>
+
+  </div>
+</ng-template>

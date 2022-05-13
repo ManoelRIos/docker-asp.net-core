@@ -15,6 +15,7 @@ import { TitleComponent } from './title/title.component';
 import { EstoqueComponent } from './estoque/estoque.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { UserAccountComponent } from './userAccount/userAccount.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -39,7 +40,8 @@ import { UserAccountComponent } from './userAccount/userAccount.component';
     MaterialModule,
     BsDropdownModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

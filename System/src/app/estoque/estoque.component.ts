@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Produto } from '../models/Produto';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-estoque',
@@ -9,6 +11,7 @@ import { Produto } from '../models/Produto';
 })
 export class EstoqueComponent implements OnInit {
 
+  public modalRef?: BsModalRef;
   public produtoForm!: FormGroup;
   public titulo = 'Estoque';
   textSimple?: string;
@@ -23,8 +26,14 @@ export class EstoqueComponent implements OnInit {
     { id:5, nome:'Coca-cola', qtd: 15, undMed:'L'},
     { id:6, nome:'Guaraná', qtd: 18, undMed: 'L'}
   ];
+  
+ 
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder,
+              private modalService: BsModalService) { 
     this.createForm();
   }
 
@@ -40,6 +49,7 @@ export class EstoqueComponent implements OnInit {
   }
   produtoSubmit(){
     console.log(this.produtoForm.value);
+    
   }
 
   produtoSelect(produto: Produto){
