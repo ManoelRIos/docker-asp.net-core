@@ -1,7 +1,53 @@
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using System_WebAPI.Models;
+
 namespace System_WebAPI.Data
 {
-    public class Repository : IRepository
+  public class Repository : IRepository
+  {
+    private readonly DataContext _context;
+
+    public Repository(DataContext context)
     {
-         
+        _context = context;
     }
+
+    public void Add<T>(T entity) where T : class
+    {
+      _context.Add(entity);
+    }
+
+    public void Delete<T>(T entity) where T : class
+    {
+      _context.Remove(entity);
+    }
+
+    public async Task<Produto[]> GetAllProdutoAsync()
+    {
+        IQueryable<Produto> query = _context.Produto;
+
+        query = query.AsNoTracking().OrderBy(c => c.Id);
+
+        return await query.ToArrayAsync();
+    }
+    public async Task<Produto> GetProdutoAsyncById(int produtoId)
+    {
+        IQueryable<Produto> query = _context.Produto;
+
+        query = query.AsNoTracking().OrderBy(produto => produto.Id).Where(produto => produto.Id == produtoId);
+        return await query.FirstOrDefaultAsync();
+    }
+
+    public async Task<bool> SaveChangesAsync()
+    {
+      return (await _context.SaveChangesAsync()) > 0;
+    }
+
+    public void Update<T>(T entity) where T : class
+    {
+       _context.Update(entity);
+    }
+  }
 }

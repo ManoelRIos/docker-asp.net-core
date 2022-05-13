@@ -8,23 +8,37 @@ namespace System_WebAPI.Controllers
 
     public class ProdutoController : ControllerBase
     {
+        private readonly IRepository _repo;
         public ProdutoController(IRepository repo)
         {
+            _repo = repo;
                         
         }
         [HttpGet]
-        public IActionResult get()            
-        {
-            
+        public async Task<IActionResult> Get()            
+        {            
             try
             {
-                return Ok("produto");                
+                var result = await _repo.GetAllProdutoAsync();
+                return Ok(result);                
             }
             catch (Exception ex)
             {
                 return BadRequest($"Erro: {ex.Message}");
+            }    
+        }
+            [HttpGet("{ProdutoId}")]
+        public async Task<IActionResult> GetProdutoAsyncById(int produtoId)            
+        {            
+            try
+            {
+                var result = await _repo.GetProdutoAsyncById(produtoId);
+                return Ok(result);                
             }
-            
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro: {ex.Message}");
+            }    
         }
 
     }

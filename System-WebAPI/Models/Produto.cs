@@ -5,16 +5,17 @@ namespace System_WebAPI.Models
     public Produto() { }
     public Produto(int id, string name, int qtd, string undMed)
     {
-      this.id = id;
-      this.name = name;
-      this.qtd = qtd;
-      this.undMed = undMed;
+      this.Id = id;
+      this.Name = name;
+      this.Qtd = qtd;
+      this.UndMed = undMed;
 
     }
-    public int id { get; set; }
-    public string name { get; set; }
-    public int qtd { get; set; }
-    public string undMed { get; set; }
+    public int Id { get; set; }
+    public string? Name { get; set; }
+    public int Qtd { get; set; }
+    public string? UndMed { get; set; }
+    
 
     
 
