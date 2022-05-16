@@ -5,7 +5,7 @@
   <div *ngIf="produtoSelected">
     <div class="row">
       <div class="col-10">
-        <h2>Editando: {{ produtoSelected.nome }}</h2>
+        <h2>Editando: {{ produtoSelected.name }}</h2>
       </div>
       <button class="btn btn-outline-primary col-1" (click)="voltar()">
         Voltar
@@ -15,7 +15,7 @@
     <form [formGroup]="produtoForm" (submit)="produtoSubmit()">
       <div class="form-group">
         <label for="formGroupExampleInput">Nome</label>
-        <input type="text" class="form-control" formControlName="nome" />
+        <input type="text" class="form-control" formControlName="name" />
       </div>
       <div class="form-group input-group mb-3">
         <label class="input-group-text" for="formGroupExampleInput2"
@@ -25,16 +25,13 @@
         <label class="input-group-text" for="inputGroupSelect01"
           >Unidade de medida</label
         >
-        <select class="form-select">
-          <option formControlName="undMed" selected>
-            {{ produtoSelected.undMed }}
-          </option>
-          <option value="1">Kg</option>
-          <option value="2">Unidade</option>
-          <option value="3">L</option>
+        <select formControlName="undMed" class="form-select">
+          <option *ngFor="let med of medidas" [ngValue] = "med">
+            {{ med }}
+          </option>         
         </select>
       </div>
-      <button class="btn btn-outline-success" [disabled]="!produtoForm.valid">
+      <button  class="btn btn-outline-success" [disabled]="!produtoForm.valid">
         Enviar
       </button>
     </form>
@@ -59,7 +56,7 @@
       <tbody>
         <tr *ngFor="let produto of produtos">
           <th scope="row">{{ produto.id }}</th>
-          <td class="table-light">{{ produto.nome }}</td>
+          <td class="table-light">{{ produto.name }}</td>
           <td>
             {{ produto.qtd }}
           </td>

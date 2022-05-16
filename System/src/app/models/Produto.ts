@@ -1,7 +1,7 @@
 
 export class Produto{
   id!: number;
-  nome!: string;
+  name!: string;
   qtd!: number;
   undMed!: string;
 }
