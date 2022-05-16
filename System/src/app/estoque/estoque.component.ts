@@ -20,8 +20,10 @@ export class EstoqueComponent implements OnInit {
   public produtoSelected?: null | Produto;
   public produtos!: Produto[];
 
-  openModal(template: TemplateRef<any>) {
+  openModal(template: TemplateRef<any>, produto: Produto) {
     this.modalRef = this.modalService.show(template);
+    this.produtoSelected = produto;
+    
   }
 
   constructor(
@@ -55,6 +57,16 @@ export class EstoqueComponent implements OnInit {
       undMed: ['', Validators.required],
     });
   }
+  criarProduto(produto: Produto){
+    this.produtoService.post(produto).subscribe(
+      (retorno: any) => {
+      console.log(retorno);
+    },
+      (erro: any) => {
+      console.log(erro);
+    }
+    );
+  }
 
   salvarProduto(produto: Produto) {
     this.produtoService.put(produto.id, produto).subscribe(
@@ -65,6 +77,18 @@ export class EstoqueComponent implements OnInit {
         console.log(erro);
       }
     );
+  }
+  deletarProduto(produto: Produto){
+    this.produtoService.delete(produto.id).subscribe(
+      (retorno: any) => {
+        console.log(retorno);
+      },
+      (erro: any) => {
+        console.log(erro);
+      }
+    );
+      
+
   }
 
   produtoSubmit() {

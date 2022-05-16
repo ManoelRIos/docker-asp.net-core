@@ -42,6 +42,7 @@
 
   <!-- Lista de produtos em estoque -->
   <div *ngIf="!produtoSelected">
+    
     <table class="table table-striped table-hover">
       <thead class="table-dark">
         <tr>
@@ -83,7 +84,7 @@
               <button (click)="produtoSelect(produto)" class=" btn btn-outline-primary">
                 Detalhes
               </button>
-              <button  (click)="openModal(template)" class=" btn btn-outline-danger">
+              <button  (click)="openModal(template, produto)" class=" btn btn-outline-danger">
                 Excluir
               </button>              
             </div>            
@@ -103,7 +104,7 @@
     </button>
   </div>
   <div class=" modal-body">
-    <button class="btn btn-danger">Sim</button>
+    <button *ngIf="(produtoSelected)" (click)="deletarProduto(produtoSelected)" class="btn btn-danger">Sim</button>
     <button  (click)="modalRef?.hide()" class="btn btn-light ">Cancelar</button>
 
   </div>
