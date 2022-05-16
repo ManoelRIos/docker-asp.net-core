@@ -24,6 +24,11 @@ namespace System_WebAPI.Data
       _context.Remove(entity);
     }
 
+    public void Update<T>(T entity) where T : class
+    {
+       _context.Update(entity);
+    }
+
     public async Task<Produto[]> GetAllProdutoAsync()
     {
         IQueryable<Produto> query = _context.Produto;
@@ -43,11 +48,6 @@ namespace System_WebAPI.Data
     public async Task<bool> SaveChangesAsync()
     {
       return (await _context.SaveChangesAsync()) > 0;
-    }
-
-    public void Update<T>(T entity) where T : class
-    {
-       _context.Update(entity);
     }
   }
 }

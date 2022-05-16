@@ -12,12 +12,8 @@ namespace System_WebAPI.Models
 
     }
     public int Id { get; set; }
-    public string? Name { get; set; }
+    public string Name { get; set; }
     public int Qtd { get; set; }
-    public string? UndMed { get; set; }
-    
-
-    
-
+    public string UndMed { get; set; }
   }
 }
