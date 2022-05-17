@@ -17,13 +17,14 @@ import { EstoqueComponent } from './estoque/estoque.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { UserAccountComponent } from './userAccount/userAccount.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { LoginComponent } from './login/login.component';
 
 
 
 
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     PedidosComponent,
     CardapioComponent,
@@ -31,7 +32,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     DashboardComponent,
       TitleComponent,
       EstoqueComponent,
-      UserAccountComponent
+      UserAccountComponent,
+      LoginComponent
    ],
   imports: [
     BrowserModule,

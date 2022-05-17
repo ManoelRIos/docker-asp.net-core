@@ -18,12 +18,11 @@ export class EstoqueComponent implements OnInit {
   public titulo = 'Estoque';
   textSimple?: string;
   public produtoSelected?: null | Produto;
-  public produtos!: Produto[];
+  public produtos: Produto[] = [];
 
-  openModal(template: TemplateRef<any>, produto: Produto) {
+  openModal(template: TemplateRef<any>, produto?: Produto) {
     this.modalRef = this.modalService.show(template);
     this.produtoSelected = produto;
-    
   }
 
   constructor(
@@ -57,43 +56,45 @@ export class EstoqueComponent implements OnInit {
       undMed: ['', Validators.required],
     });
   }
-  criarProduto(produto: Produto){
+  criarProduto(produto: Produto) {
     this.produtoService.post(produto).subscribe(
       (retorno: any) => {
-      console.log(retorno);
-    },
+        console.log(retorno);
+      },
       (erro: any) => {
-      console.log(erro);
-    }
+        console.log(erro);
+      }
     );
+    console.log(this.produtoForm.value);
   }
 
   salvarProduto(produto: Produto) {
     this.produtoService.put(produto.id, produto).subscribe(
       (retorno: any) => {
         console.log(retorno);
+        this.carregarProdutos();
       },
       (erro: any) => {
         console.log(erro);
       }
     );
   }
-  deletarProduto(produto: Produto){
+  deleteProduto(produto: Produto) {
     this.produtoService.delete(produto.id).subscribe(
       (retorno: any) => {
         console.log(retorno);
+        this.voltar();
       },
       (erro: any) => {
         console.log(erro);
       }
     );
-      
-
   }
 
   produtoSubmit() {
     console.log(this.produtoForm.value);
     this.salvarProduto(this.produtoForm.value);
+    this.voltar();
   }
 
   produtoSelect(produto: Produto) {
