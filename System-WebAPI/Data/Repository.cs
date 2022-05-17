@@ -29,6 +29,7 @@ namespace System_WebAPI.Data
        _context.Update(entity);
     }
 
+    //Produto
     public async Task<Produto[]> GetAllProdutoAsync()
     {
         IQueryable<Produto> query = _context.Produto;
@@ -44,6 +45,7 @@ namespace System_WebAPI.Data
         query = query.AsNoTracking().OrderBy(produto => produto.Id).Where(produto => produto.Id == produtoId);
         return await query.FirstOrDefaultAsync();
     }
+
 
     public async Task<bool> SaveChangesAsync()
     {
