@@ -57,11 +57,19 @@ namespace System_WebAPI.Data
       query = query.AsNoTracking().OrderBy(c => c.Id);
       return await query.ToArrayAsync();
     }
-    public async Task<ItemCardapio[]> GetAllItemCardapioByCat(string produtoCat)
+
+    public async Task<ItemCardapio[]> GetAllItemCardapioByCat(string itemCardapioCat)
     {
       IQueryable<ItemCardapio> query = _context.ItemCardapio;
-      query = query.AsNoTracking().OrderBy(c => c.Id).Where(c => c.Category == produtoCat);
+      query = query.AsNoTracking().OrderBy(c => c.Id).Where(c => c.Category == itemCardapioCat);
       return await query.ToArrayAsync();
+    }
+
+    public async Task<ItemCardapio> GetItemCardapioById(int produtoId)
+    {
+      IQueryable<ItemCardapio> query = _context.ItemCardapio;
+      query = query.AsNoTracking().Where(c => c.Id == produtoId);
+      return await query.FirstOrDefaultAsync();
     }
   }
 }

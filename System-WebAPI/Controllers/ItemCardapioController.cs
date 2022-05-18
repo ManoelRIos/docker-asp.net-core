@@ -29,18 +29,32 @@ namespace System_WebAPI.Controllers
             }    
         }
 
-        [HttpGet("{produtoCat}")]
-         public async Task<IActionResult> GetByCat(string produtoCat)            
+        [HttpGet("categoria={itemCardapioCat}")]
+         public async Task<IActionResult> GetByCat(string itemCardapioCat)            
         {            
             try
             {
-                var result = await _repo.GetAllItemCardapioByCat(produtoCat);
+                var result = await _repo.GetAllItemCardapioByCat(itemCardapioCat);
                 return Ok(result);                
             }
             catch (Exception ex)
             {
                 return BadRequest($"Erro: {ex.Message}");
             }    
+        }
+        [HttpGet("{itemCardapioId}")]
+        public async Task<IActionResult> GetById(int itemCardapioId)
+        {
+            try
+            {
+                var result = await _repo.GetItemCardapioById(itemCardapioId);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                
+                return BadRequest($"Erro: {ex.Message}");
+            }
         }
         
     }
