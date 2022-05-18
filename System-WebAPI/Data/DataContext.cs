@@ -9,7 +9,7 @@ namespace System_WebAPI.Data
         public DataContext(DbContextOptions<DataContext> options): base (options) { }
 
         public DbSet<Produto> Produto { get; set; }
-        public DbSet<ItemCardapio> ItemPedido { get; set; }
+        public DbSet<ItemCardapio> ItemCardapio { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

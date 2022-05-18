@@ -18,15 +18,17 @@ namespace System_WebAPI.Data
     {
       _context.Add(entity);
     }
-
     public void Delete<T>(T entity) where T : class
     {
       _context.Remove(entity);
     }
-
     public void Update<T>(T entity) where T : class
     {
        _context.Update(entity);
+    }
+    public async Task<bool> SaveChangesAsync()
+    {
+      return (await _context.SaveChangesAsync()) > 0;
     }
 
     //Produto
@@ -47,9 +49,19 @@ namespace System_WebAPI.Data
     }
 
 
-    public async Task<bool> SaveChangesAsync()
+    //ItemCardapio
+    public async Task<ItemCardapio[]> GetAllItemCardapioAsync()
     {
-      return (await _context.SaveChangesAsync()) > 0;
+      IQueryable<ItemCardapio> query = _context.ItemCardapio;
+
+      query = query.AsNoTracking().OrderBy(c => c.Id);
+      return await query.ToArrayAsync();
+    }
+    public async Task<ItemCardapio[]> GetAllItemCardapioByCat(string produtoCat)
+    {
+      IQueryable<ItemCardapio> query = _context.ItemCardapio;
+      query = query.AsNoTracking().OrderBy(c => c.Id).Where(c => c.Category == produtoCat);
+      return await query.ToArrayAsync();
     }
   }
 }
