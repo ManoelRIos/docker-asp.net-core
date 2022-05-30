@@ -10,7 +10,6 @@ namespace System_WebAPI.Models
             this.Desc = desc;
             this.Price = price;
             this.Category = category;
-
         }   
         public int Id { get; set; }        
         public string Name { get; set; }

@@ -57,6 +57,7 @@ namespace System_WebAPI.Controllers
             }
         }
         
+        [HttpPost]
         public async Task<IActionResult> Post(ItemCardapio model)
         {
             try
@@ -74,5 +75,50 @@ namespace System_WebAPI.Controllers
             return BadRequest();
 
         }
+        
+        [HttpPut("{itemCardapioId}")]
+        public async Task<IActionResult> Put(int itemCardapioId, ItemCardapio model)
+        {
+            try
+            {
+                var itemCardapio = await _repo.GetItemCardapioById(itemCardapioId);
+                if(itemCardapio == null) return NotFound();
+                _repo.Update(model);
+
+                if(await _repo.SaveChangesAsync())
+                {
+                    return Ok(model);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro: {ex.Message}");
+            }
+            return BadRequest();
+
+        }
+
+        [HttpDelete("{itemCardapioId}")]
+        public async Task<IActionResult> Delete(int itemCardapioId)
+        {
+            try
+            {
+                var itemCardapio = await _repo.GetItemCardapioById(itemCardapioId);
+                if(itemCardapio == null) return NotFound();
+                _repo.Delete(itemCardapio);
+
+                if(await _repo.SaveChangesAsync())
+                {
+                    return Ok("Deletado com sucesso");
+                }
+                return BadRequest();
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro: {ex.Message}");                
+            }
+
+        }    
     }
 }

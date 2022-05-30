@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System_WebAPI.Data;
+using System_WebAPI.Models;
 
 namespace System_WebAPI.Controllers
 {
@@ -44,9 +45,23 @@ namespace System_WebAPI.Controllers
             }
         }
 
-        public void Post()
+        [HttpPost]
+        public async Task<ActionResult> Post(ItemAdicional model)
         {
-
+            try
+            {
+                _repo.Add(model);
+                if(await _repo.SaveChangesAsync())
+                {
+                    return Ok(model);
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Erro: {ex.Message}");
+            }
+            return BadRequest();
+           
         }
     }
 }
