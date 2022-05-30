@@ -1,5 +1,3 @@
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System_WebAPI.Models;
 
@@ -65,10 +63,25 @@ namespace System_WebAPI.Data
       return await query.ToArrayAsync();
     }
 
-    public async Task<ItemCardapio> GetItemCardapioById(int produtoId)
+    public async Task<ItemCardapio> GetItemCardapioById(int itemCardapioId)
     {
       IQueryable<ItemCardapio> query = _context.ItemCardapio;
-      query = query.AsNoTracking().Where(c => c.Id == produtoId);
+      query = query.AsNoTracking().Where(c => c.Id == itemCardapioId);
+      return await query.FirstOrDefaultAsync();
+    }
+
+    //ItemAdicional
+    public async Task<ItemAdicional[]> GetAllItemAdicionalAsync()
+    {
+      IQueryable<ItemAdicional> query = _context.ItemAdicional;
+      query = query.AsNoTracking().OrderBy(c => c.Id);
+      return await query.ToArrayAsync();
+    }
+
+    public async Task<ItemAdicional> GetItemAdicionalById(int itemAdicionalId)
+    {
+      IQueryable<ItemAdicional> query = _context.ItemAdicional;
+      query = query.AsNoTracking().Where(c => c.Id == itemAdicionalId);
       return await query.FirstOrDefaultAsync();
     }
   }

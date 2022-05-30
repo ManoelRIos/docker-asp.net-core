@@ -11,6 +11,8 @@ namespace System_WebAPI.Data
         public DbSet<Produto> Produto { get; set; }
         public DbSet<ItemCardapio> ItemCardapio { get; set; }
 
+        public DbSet<ItemAdicional> ItemAdicional { get; set;}
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Produto>()
@@ -47,6 +49,11 @@ namespace System_WebAPI.Data
                 new ItemCardapio(12, "Agua Mineral", "", 5, "Bebidas"),                
                 new ItemCardapio(13, "Agua s/gás", "", 2, "Bebidas"),                
                 new ItemCardapio(14, "Agua Desmineralizada", "", 6, "Bebidas")                
+            });
+
+            builder.Entity<ItemAdicional>()
+            .HasData(new List<ItemAdicional>(){
+                new ItemAdicional (1, "Bacon", 2)
             });
         }
         

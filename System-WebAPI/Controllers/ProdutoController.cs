@@ -12,9 +12,9 @@ namespace System_WebAPI.Controllers
         private readonly IRepository _repo;
         public ProdutoController(IRepository repo)
         {
-            _repo = repo;
-                        
+            _repo = repo;               
         }
+        
         [HttpGet]
         public async Task<IActionResult> Get()            
         {            

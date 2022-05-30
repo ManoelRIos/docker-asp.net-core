@@ -10,13 +10,38 @@ using System_WebAPI.Data;
 namespace System_WebAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220518162025_Initial")]
+    [Migration("20220530184321_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.4");
+
+            modelBuilder.Entity("System_WebAPI.Models.ItemAdicional", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ItemAdicional");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Bacon",
+                            Price = 2f
+                        });
+                });
 
             modelBuilder.Entity("System_WebAPI.Models.ItemCardapio", b =>
                 {

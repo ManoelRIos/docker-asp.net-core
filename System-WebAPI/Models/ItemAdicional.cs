@@ -3,6 +3,7 @@ namespace System_WebAPI.Models
     
     public class ItemAdicional
     {
+        public ItemAdicional() { }
         public ItemAdicional(int id, string name, float price)
         {
             this.Id = id;

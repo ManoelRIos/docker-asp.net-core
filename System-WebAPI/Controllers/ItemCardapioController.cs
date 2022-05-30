@@ -12,9 +12,9 @@ namespace System_WebAPI.Controllers
         private readonly IRepository _repo;
         public ItemCardapioController(IRepository repo)
         {
-            _repo = repo;
-                        
+            _repo = repo;              
         }
+
         [HttpGet]
         public async Task<IActionResult> Get()            
         {            
@@ -57,5 +57,22 @@ namespace System_WebAPI.Controllers
             }
         }
         
+        public async Task<IActionResult> Post(ItemCardapio model)
+        {
+            try
+            {
+                _repo.Add(model);
+                if(await _repo.SaveChangesAsync())
+                {
+                    return Ok(model);
+                }
+            }
+            catch (Exception ex)
+            {
+                 return BadRequest($"Erro: {ex.Message}");
+            }
+            return BadRequest();
+
+        }
     }
 }

@@ -9,6 +9,20 @@ namespace System_WebAPI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "ItemAdicional",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    Price = table.Column<float>(type: "REAL", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ItemAdicional", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ItemCardapio",
                 columns: table => new
                 {
@@ -38,6 +52,11 @@ namespace System_WebAPI.Migrations
                 {
                     table.PrimaryKey("PK_Produto", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "ItemAdicional",
+                columns: new[] { "Id", "Name", "Price" },
+                values: new object[] { 1, "Bacon", 2f });
 
             migrationBuilder.InsertData(
                 table: "ItemCardapio",
@@ -182,6 +201,9 @@ namespace System_WebAPI.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ItemAdicional");
+
             migrationBuilder.DropTable(
                 name: "ItemCardapio");
 

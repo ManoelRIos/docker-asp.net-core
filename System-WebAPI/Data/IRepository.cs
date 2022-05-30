@@ -17,5 +17,9 @@ namespace System_WebAPI.Data
         Task<ItemCardapio[]> GetAllItemCardapioAsync();
         Task<ItemCardapio[]> GetAllItemCardapioByCat(string itemCardapioCat);
         Task<ItemCardapio> GetItemCardapioById(int itemCardapioId);
+
+        //ItemAdicional 
+        Task<ItemAdicional[]> GetAllItemAdicionalAsync();
+        Task<ItemAdicional> GetItemAdicionalById(int itemAdicionalId);
     }
 }

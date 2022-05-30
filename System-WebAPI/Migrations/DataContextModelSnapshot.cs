@@ -16,6 +16,31 @@ namespace System_WebAPI.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.4");
 
+            modelBuilder.Entity("System_WebAPI.Models.ItemAdicional", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ItemAdicional");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Bacon",
+                            Price = 2f
+                        });
+                });
+
             modelBuilder.Entity("System_WebAPI.Models.ItemCardapio", b =>
                 {
                     b.Property<int>("Id")
