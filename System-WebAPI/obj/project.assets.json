@@ -2400,26 +2400,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\manoel.rios\\.nuget\\packages\\": {}
+    "C:\\Users\\manoe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\System-WebAPI\\System-WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\manoe\\Documents\\Projects\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj",
       "projectName": "System-WebAPI",
-      "projectPath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\System-WebAPI\\System-WebAPI.csproj",
-      "packagesPath": "C:\\Users\\manoel.rios\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\manoel.rios\\Documents\\projetos\\docker-asp.net-core & angular\\System-WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\manoe\\Documents\\Projects\\docker-asp.net-core\\System-WebAPI\\System-WebAPI.csproj",
+      "packagesPath": "C:\\Users\\manoe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\manoe\\Documents\\Projects\\docker-asp.net-core\\System-WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\manoel.rios\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\manoe\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2485,7 +2483,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

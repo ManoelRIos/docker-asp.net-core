@@ -29,7 +29,7 @@ namespace System_WebAPI.Controllers
             }    
         }
 
-        [HttpGet("categoria={itemCardapioCat}")]
+        [HttpGet("categoria/{itemCardapioCat}")]
          public async Task<IActionResult> GetByCat(string itemCardapioCat)            
         {            
             try
