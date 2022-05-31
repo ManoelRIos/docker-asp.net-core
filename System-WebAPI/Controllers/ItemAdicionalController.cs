@@ -31,12 +31,12 @@ namespace System_WebAPI.Controllers
         }
 
         [HttpGet("{itemAdicionalId}")]
-        public async Task<ActionResult> GetById(int itemAdcionalId)
+        public async Task<ActionResult> GetById(int itemAdicionalId)
 
         {
             try
             {
-                var result = await _repo.GetItemAdicionalById(itemAdcionalId);
+                var result = await _repo.GetItemAdicionalById(itemAdicionalId);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -46,7 +46,7 @@ namespace System_WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(ItemAdicional model)
+        public async Task<ActionResult> Post(   ItemAdicional model)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace System_WebAPI.Controllers
            
         }
 
-        [HttpPut("{itemCardapioId}")]
+        [HttpPut("{itemAdicionalId}")]
         public async Task<ActionResult> Put(int itemAdicionalId, ItemAdicional model)
         {
             try
@@ -85,7 +85,7 @@ namespace System_WebAPI.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("{itemAdicionalId")]
+        [HttpDelete("{itemAdicionalId}")]
         public async Task<IActionResult> Delete(int itemAdicionalId)
         {
             try
@@ -93,12 +93,16 @@ namespace System_WebAPI.Controllers
                 var itemAdicional = await _repo.GetItemAdicionalById(itemAdicionalId);
                 if(itemAdicional == null) return NotFound();
                 _repo.Delete(itemAdicional);
+                if(await _repo.SaveChangesAsync())
+                {
+                    return Ok("Deletado com sucesso");
+                }
+                return BadRequest();                
             }
             catch (Exception ex)
             {
-                 return BadRequest($"Erro: {ex.Message}");
-            }
-            return BadRequest();
+                return BadRequest($"Erro: {ex.Message}");                
+            }                    
         }
     }
 }
