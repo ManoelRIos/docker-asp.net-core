@@ -1,5 +1,6 @@
+
+<app-title [title]="title"></app-title>
 <div class="container">
-  <app-title [title]="title"></app-title>
   <!-- DETAILS -->
   <div class="d-flex justify-content-cente">
     <div *ngIf="pratoSelected">
@@ -18,36 +19,23 @@
   </div>
 
   <!-- INDEX ALL -->
-
-
-
-  <div *ngIf="!pratoSelected">
-    <div *ngFor="let prato of pratos">
-      <div class="card" (click)="pratoSelect(prato)">        
-        <div class="card-body">
-         <!--  <img class="card-img-top" src="https://fribraz.com.br/loja/wp-content/uploads/2020/05/T-BONE4-scaled.jpg" alt=""/> -->
-          <h5 class="card-title">{{ prato.nome }}</h5>
-          <p class="card-text">{{ prato.desc }}</p>
-          <span>{{ prato.valor }} R$</span>
+  <div  class="item-cards" *ngIf="!pratoSelected">
+    <div class="item-card-box" *ngFor="let prato of pratos">
+      <div class="img-container">
+        <div class="img-inner">
+          <div class="inner-skew">
+            <img
+              src="https://supermercadosrondon.com.br/guiadecarnes/images/postagens/quer_fazer_hamburger_artesanal_perfeito_2019-05-14.jpg"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <h3>{{ prato.nome }}</h3>
+        <div>
+          {{ prato.desc }}
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="a-box">
-  <div class="img-container">
-    <div class="img-inner">
-      <div class="inner-skew">
-        <img src="https://d3sn2rlrwxy0ce.cloudfront.net/maga-stacker-4-thumb.png?mtime=20210916133348&focal=none">
-      </div>
-    </div>
-  </div>
-  <div class="text-container">
-    <h3>A blue bird</h3>
-    <div>
-      This a demo experiment to skew image container. It looks good.
-  </div>
-</div>
-
-<div id="container"></div>
