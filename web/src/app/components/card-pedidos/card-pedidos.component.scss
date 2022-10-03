@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 .pedidos{
   display: flex;
   justify-content: space-around;
@@ -11,4 +13,8 @@
   padding: 1.4rem 3.6rem;
   background-color: white;  
   border-radius: 2.1rem;
+}
+
+.card-pedido h2{
+  color: $yellow;
 }

@@ -16,22 +16,22 @@ import { EstoqueComponent } from './pages/estoque/estoque.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CardPedidosComponent } from './components/card-pedidos/card-pedidos.component';
-import {CardNumericInfoComponent} from './components/card-numeric-info/card-numeric-info.component'
-
-
-
-
+import {CardNumericInfoComponent} from './components/card-numeric-info/card-numeric-info.component';
+import {CardMesaComponent} from './components/card-mesa/card-mesa.component';
+import { MesasComponent } from './pages/mesas/mesas.component';
 
 @NgModule({
   declarations: [					
     AppComponent,
     PedidosComponent,
     CardapioComponent,
+    MesasComponent,
     MenuComponent,    
     TitleComponent,
     EstoqueComponent,            
     CardPedidosComponent,
     CardNumericInfoComponent,
+    CardMesaComponent
    ],
   imports: [
     BrowserModule,
