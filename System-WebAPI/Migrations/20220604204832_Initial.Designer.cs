@@ -10,7 +10,7 @@ using System_WebAPI.Data;
 namespace System_WebAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220530184321_Initial")]
+    [Migration("20220604204832_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -178,6 +178,23 @@ namespace System_WebAPI.Migrations
                             Name = "Agua Desmineralizada",
                             Price = 6f
                         });
+                });
+
+            modelBuilder.Entity("System_WebAPI.Models.ItemPedido", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Observation")
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ItemPedido");
                 });
 
             modelBuilder.Entity("System_WebAPI.Models.Produto", b =>

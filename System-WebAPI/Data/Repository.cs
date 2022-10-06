@@ -84,5 +84,20 @@ namespace System_WebAPI.Data
       query = query.AsNoTracking().Where(c => c.Id == itemAdicionalId);
       return await query.FirstOrDefaultAsync();
     }
+
+    //ItemPedido
+    public async Task<ItemPedido[]> GetAllItemPedidoAsync()
+    {
+      IQueryable<ItemPedido> query = _context.ItemPedido;
+      query = query.AsNoTracking().OrderBy(c => c.Id);
+      return await query.ToArrayAsync();
+    }
+
+    public async Task<ItemPedido> GetItemPedidoById(int itemAdicionalId)
+    {
+      IQueryable<ItemPedido> query = _context.ItemPedido;
+      query = query.AsNoTracking().Where(c => c.Id == itemAdicionalId);
+      return await query.FirstOrDefaultAsync();
+    }
   }
 }

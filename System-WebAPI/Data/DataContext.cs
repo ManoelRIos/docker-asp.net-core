@@ -12,6 +12,7 @@ namespace System_WebAPI.Data
         public DbSet<ItemCardapio> ItemCardapio { get; set; }
 
         public DbSet<ItemAdicional> ItemAdicional { get; set;}
+        public DbSet<ItemPedido> ItemPedido { get; set;}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

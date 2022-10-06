@@ -39,6 +39,20 @@ namespace System_WebAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ItemPedido",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Price = table.Column<float>(type: "REAL", nullable: false),
+                    Observation = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ItemPedido", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Produto",
                 columns: table => new
                 {
@@ -206,6 +220,9 @@ namespace System_WebAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "ItemCardapio");
+
+            migrationBuilder.DropTable(
+                name: "ItemPedido");
 
             migrationBuilder.DropTable(
                 name: "Produto");

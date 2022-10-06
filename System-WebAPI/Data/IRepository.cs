@@ -21,5 +21,9 @@ namespace System_WebAPI.Data
         //ItemAdicional 
         Task<ItemAdicional[]> GetAllItemAdicionalAsync();
         Task<ItemAdicional> GetItemAdicionalById(int itemAdicionalId);
+
+        //ItemPedido
+        Task<ItemPedido[]> GetAllItemPedidoAsync();
+        Task<ItemPedido> GetItemPedidoById(int itemAdicionalId);
     }
 }

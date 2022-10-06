@@ -178,6 +178,23 @@ namespace System_WebAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("System_WebAPI.Models.ItemPedido", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Observation")
+                        .HasColumnType("TEXT");
+
+                    b.Property<float>("Price")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ItemPedido");
+                });
+
             modelBuilder.Entity("System_WebAPI.Models.Produto", b =>
                 {
                     b.Property<int>("Id")
